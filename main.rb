@@ -10,7 +10,10 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
 ]
-
+def querydata(dispmsg)
+  puts dispmsg
+  gets.chomp.strip
+end
 def won(board, symbol)
   for win_combination in WIN_COMBINATIONS
   board_index_0 = board[win_combination[0]]
@@ -23,6 +26,14 @@ def won(board, symbol)
   end
   return false
 end
+
+puts "Welcome to rubys Tic-Tac-Toe !\n\n"
+
+player1name = querydata("Enter Player 1's name:")
+player2name = querydata("Enter Player 2's name:")
+
+puts "\n#{player1name} will play with X and #{player2name} will play with O\n\n"
+puts "Let's start!\n\n"
 
 def full(board)
 
